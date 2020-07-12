@@ -32,27 +32,7 @@ struct PostListView: View {
       }
       
       List(postViewModel.posts) { post in
-        VStack(alignment: .leading) {
-          HStack {
-            Image("mascot")
-              .resizable()
-              .frame(width: 50, height: 50, alignment: .leading)
-            VStack(alignment: .leading) {
-              Text(post.userName)
-                .font(.headline)
-              Text(post.timestamp.string)
-                .font(.caption)
-            }
-          }
-          
-          
-          Text(post.textBody != nil ? post.textBody! : "")
-          if post.uiImage != nil {
-            Image(uiImage: post.uiImage!)
-              .resizable()
-              .frame(width: 150, height: 150)
-          }
-        }
+        PostView(post: .constant(post))
       }
 
     }
