@@ -12,7 +12,7 @@ struct PostListView: View {
   
   @ObservedObject var postViewModel: PostViewModel
   @State var createModalIsPresented = false
-//  @State var editModalIsPresented = false
+  //  @State var editModalIsPresented = false
   
   var body: some View {
     Form {
@@ -32,15 +32,33 @@ struct PostListView: View {
       }
       
       List(postViewModel.posts) { post in
-        Text(post.userName)
+        VStack(alignment: .leading) {
+          HStack {
+            Image("mascot")
+              .resizable()
+              .frame(width: 50, height: 50, alignment: .leading)
+            VStack(alignment: .leading) {
+              Text(post.userName)
+                .font(.headline)
+              Text(post.timestamp.string)
+                .font(.caption)
+            }
+          }
+          
+          
+          Text(post.textBody != nil ? post.textBody! : "")
+          if post.uiImage != nil {
+            Image(uiImage: post.uiImage!)
+              .resizable()
+              .frame(width: 150, height: 150)
+          }
+        }
       }
-      
+
     }
     .sheet(isPresented: $createModalIsPresented) {
       NewPostView(postHandler: self.postViewModel)
     }
-  
-    
     
     // TODO: This should look exactly like the Birdie table view,
     // but with only one button.
