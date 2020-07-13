@@ -15,35 +15,31 @@ struct PostListView: View {
   //  @State var editModalIsPresented = false
   
   var body: some View {
-    Form {
-      VStack {
-        HStack {
-          Image("mascot")
-            .resizable()
-            .frame(width: 50, height: 50, alignment: .leading)
-          Text("Home")
-            .bold()
-            .font(.title)
-        }
-        
-        Button("Create New Post") {
-          self.createModalIsPresented = true
-        }
+    VStack(alignment: .leading) {
+      HStack {
+        Image("mascot")
+          .resizable()
+          .frame(width: 50, height: 50, alignment: .leading)
+        Text("Home")
+          .bold()
+          .font(.title)
+      }
+      
+      Button("Create New Post") {
+        self.createModalIsPresented = true
       }
       
       List(postViewModel.posts) { post in
         PostView(post: .constant(post))
       }
-
+      // TODO: This should look exactly like the Birdie table view,
+      // but with only one button.
+      //    Text("Layout header, new-post button, List of posts")
+      
     }
     .sheet(isPresented: $createModalIsPresented) {
       NewPostView(postHandler: self.postViewModel)
     }
-    
-    // TODO: This should look exactly like the Birdie table view,
-    // but with only one button.
-    //    Text("Layout header, new-post button, List of posts")
-    
   }
 }
 

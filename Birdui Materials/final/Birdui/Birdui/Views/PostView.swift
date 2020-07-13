@@ -12,7 +12,7 @@ struct PostView: View {
   @Binding var post: MediaPost
   
   let imageSize: CGFloat = 200
-
+  
   var body: some View {
     VStack(alignment: .leading) {
       HStack {
@@ -43,7 +43,7 @@ struct PostView: View {
 struct PostView_Previews: PreviewProvider {
   static var previews: some View {
     PostView(post: .constant(MediaPost(textBody: "Went to the Aquarium today :]",
-                             userName: "Audrey", timestamp: Date(timeIntervalSinceNow: -9876),
-                             uiImage: UIImage(named: "octopus"))))
+                                       userName: "Audrey", timestamp: Date(timeIntervalSinceNow: -9876),
+                                       uiImage: UIImage(named: "octopus"))))
   }
 }
