@@ -28,14 +28,12 @@ struct PostListView: View {
       Button("Create New Post") {
         self.createModalIsPresented = true
       }
+      .padding()
       
       List(postViewModel.posts) { post in
         PostView(post: .constant(post))
       }
-      // TODO: This should look exactly like the Birdie table view,
-      // but with only one button.
-      //    Text("Layout header, new-post button, List of posts")
-      
+
     }
     .sheet(isPresented: $createModalIsPresented) {
       NewPostView(postHandler: self.postViewModel)
