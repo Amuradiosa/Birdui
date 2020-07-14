@@ -30,8 +30,8 @@ struct PostListView: View {
       }
       .padding()
       
-      List(postViewModel.posts) { post in
-        PostView(post: .constant(post))
+      List(postViewModel.posts.indices) { index in
+        PostView(post: self.$postViewModel.posts[index])
       }
 
     }
