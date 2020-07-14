@@ -29,10 +29,15 @@ struct PostView: View {
       
       Text(post.textBody != nil ? post.textBody! : "")
       if post.uiImage != nil {
-        Image(uiImage: post.uiImage!)
-          .resizable()
-          .frame(width: imageSize, height: imageSize)
+        HStack {
+          Spacer()
+          Image(uiImage: post.uiImage!)
+            .resizable()
+            .frame(width: imageSize, height: imageSize)
+          Spacer()
+        }
       }
+      
     }
     // TODO: This should look exactly like Birdie's table view cell.
     // The post text is left-aligned below the mascot image.

@@ -20,9 +20,11 @@ struct PostListView: View {
         Image("mascot")
           .resizable()
           .frame(width: 50, height: 50, alignment: .leading)
+        Spacer()
         Text("Home")
           .bold()
           .font(.title)
+        Spacer(minLength: 150)
       }
       
       Button("Create New Post") {
