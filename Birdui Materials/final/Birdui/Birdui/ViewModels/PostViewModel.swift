@@ -11,6 +11,8 @@ import SwiftUI
 class PostViewModel: ObservableObject {
   @Published var posts: [MediaPost] = []
   
+  
+  
   init() {
     let imagePost1 = MediaPost(textBody: "I love debugging software!", userName: "Jay", timestamp: Date(timeIntervalSinceNow: -123456), uiImage: UIImage(named: "chop"))
     let imagePost2 = MediaPost(textBody: "Went to the Aquarium today :]", userName: "Audrey", timestamp: Date(timeIntervalSinceNow: -9876), uiImage: UIImage(named:  "octopus"))
@@ -25,3 +27,11 @@ class PostViewModel: ObservableObject {
       posts = posts.sorted(by: { $0.timestamp > $1.timestamp })
   }
 }
+
+//extension PostViewModel {
+//
+//  init(id: UUID, textbody: String?, userName: String, timestamp: Date, uiImage: UIImage?, isLiked: Bool, reaction: Reaction) {
+//
+//  }
+//
+//}

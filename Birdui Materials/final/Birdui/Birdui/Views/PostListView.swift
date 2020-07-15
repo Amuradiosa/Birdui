@@ -12,7 +12,6 @@ struct PostListView: View {
   
   @ObservedObject var postViewModel: PostViewModel
   @State var createModalIsPresented = false
-  //  @State var editModalIsPresented = false
   
   var body: some View {
     VStack(alignment: .leading) {
@@ -26,6 +25,7 @@ struct PostListView: View {
           .font(.title)
         Spacer(minLength: 150)
       }
+      
       
       Button("Create New Post") {
         self.createModalIsPresented = true

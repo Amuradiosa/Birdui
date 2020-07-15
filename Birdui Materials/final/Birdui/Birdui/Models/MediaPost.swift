@@ -14,4 +14,13 @@ struct MediaPost: Identifiable {
   let userName: String
   let timestamp: Date
   let uiImage: UIImage?
+  var isLiked: Bool = false
+  var reaction: Reaction = .love
+}
+
+enum Reaction: String, CaseIterable {
+  case love = "😻"
+  case funny = "😹"
+  case unsure = "😿"
+  case shock = "🙀"
 }

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1557FC0824BB725600B80E49 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1557FC0724BB725600B80E49 /* DateExtension.swift */; };
+		159BDFA524BF77BA001BC217 /* PostSocialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159BDFA424BF77BA001BC217 /* PostSocialView.swift */; };
 		CD7798B924AF0799004D6A6B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7798B824AF0799004D6A6B /* AppDelegate.swift */; };
 		CD7798BB24AF0799004D6A6B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7798BA24AF0799004D6A6B /* SceneDelegate.swift */; };
 		CD7798BF24AF079C004D6A6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD7798BE24AF079C004D6A6B /* Assets.xcassets */; };
@@ -23,6 +24,7 @@
 
 /* Begin PBXFileReference section */
 		1557FC0724BB725600B80E49 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		159BDFA424BF77BA001BC217 /* PostSocialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostSocialView.swift; sourceTree = "<group>"; };
 		CD7798B524AF0799004D6A6B /* Birdui.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Birdui.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD7798B824AF0799004D6A6B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD7798BA24AF0799004D6A6B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				CD7798D724B04BEC004D6A6B /* PostListView.swift */,
 				CD7798D924B04C01004D6A6B /* PostView.swift */,
 				CD7798D524B040C9004D6A6B /* NewPostView.swift */,
+				159BDFA424BF77BA001BC217 /* PostSocialView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -205,6 +208,7 @@
 				CD7798DE24B05896004D6A6B /* ImagePicker.swift in Sources */,
 				CD7798DC24B04C1A004D6A6B /* PostViewModel.swift in Sources */,
 				CD7798D824B04BEC004D6A6B /* PostListView.swift in Sources */,
+				159BDFA524BF77BA001BC217 /* PostSocialView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

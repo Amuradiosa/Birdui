@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct PostView: View {
+  
   @Binding var post: MediaPost
   
   let imageSize: CGFloat = 200
@@ -28,6 +29,7 @@ struct PostView: View {
       }
       
       Text(post.textBody != nil ? post.textBody! : "")
+      .fixedSize(horizontal: false, vertical: true)
       if post.uiImage != nil {
         HStack {
           Spacer()
@@ -38,17 +40,18 @@ struct PostView: View {
         }
       }
       
+      PostSocialView(post: $post)
+      
     }
-    // TODO: This should look exactly like Birdie's table view cell.
-    // The post text is left-aligned below the mascot image.
-    // The image, if any, is horizontally centered in the view.
   }
+  
 }
 
 struct PostView_Previews: PreviewProvider {
   static var previews: some View {
     PostView(post: .constant(MediaPost(textBody: "Went to the Aquarium today :]",
                                        userName: "Audrey", timestamp: Date(timeIntervalSinceNow: -9876),
-                                       uiImage: UIImage(named: "octopus"))))
+                                       uiImage: UIImage(named: "octopus"), isLiked: true)))
   }
 }
+
